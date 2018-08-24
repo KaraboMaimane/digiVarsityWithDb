@@ -1,0 +1,23 @@
+page-edit {
+    .contentflex{
+        display: flex;
+        justify-content: center;
+        height: 90vh;
+    }
+    input.imginput{
+        background: #990910;
+        color: white;
+        padding: .5rem;
+    }
+    .content{
+    }
+
+    .imageflex{
+        display: flex;
+        justify-content: center;
+    }
+
+    img{
+        width: 34.6rem;
+    }
+}

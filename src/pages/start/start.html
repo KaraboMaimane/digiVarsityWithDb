@@ -1,0 +1,31 @@
+<!--
+  Generated template for the StartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding>
+  <div class="contentflex">
+    <div class="content">
+      <div class="imageflex">
+        <div class="image">
+          <img src="/../../assets/imgs/coat_of_arms_of_south_africa.png" alt="" class="crest">
+        </div>
+      </div>
+
+      <h1 class="heading">Mzansi Digiversity</h1>
+      <p class="quote">Working Together we can create a bigger digital footprint</p>
+      <p class="coursesText" text-center>Courses</p>
+      <div class="cardflex" (click)="details(i, course.id)" *ngFor="let course of courseArray; let i = index">
+        <div class="image">
+          <img [src]="course.url" alt="" class="cardimage">
+        </div>
+        <div class="cardcontent">
+          <p class="course">{{ course.name }}</p>
+          <p class="desc">{{ course.description }} <span class="price">ZAR {{ course.pricing }}</span>   </p>
+        </div>
+      </div>
+      <button ion-button block (click)="nextPage('AddPage')">Add A Course</button>
+    </div>
+  </div>
+</ion-content>

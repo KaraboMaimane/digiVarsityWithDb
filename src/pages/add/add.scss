@@ -1,0 +1,25 @@
+page-add {
+    .contentflex{
+        display: flex;
+        justify-content: center;
+        height: 90vh;
+    }
+    input.imginput{
+        background: #990910;
+        color: white;
+        padding: .5rem;
+    }
+    .content{
+    }
+
+    .imageflex{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    img{
+        width: 25rem;
+        border-radius: 50%;
+        height: 25rem;;
+    }
+}
