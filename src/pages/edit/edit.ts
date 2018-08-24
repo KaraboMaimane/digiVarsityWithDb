@@ -16,17 +16,15 @@ import { DatabaseProvider } from '../../providers/database/database';
 })
 export class EditPage{
   url: string = '../../assets/imgs/plus_PNG73.png';
-  id;
+  id: number;
   key;
-  courseArray = [];
+  courseArray: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, public db: DatabaseProvider) {
   }
 
   ionViewDidEnter(){
     this.courseArray = this.navParams.get('course');
-    this.id = this.navParams.get('index');
-    console.log(this.id);
   }
 
   insertImage(event: any){
@@ -41,8 +39,11 @@ export class EditPage{
     }
   }
 
-  edit(name, description, pricing, image){
-    this.db.update(this.id, name,description, pricing, this.url)
+  edit(name, description, pricing){
+    this.db.update(this.courseArray.id, name,description, pricing, this.url).then(data =>{
+      console.log(data);
+    });
+    this.navCtrl.push('StartPage');
   }
 
 
